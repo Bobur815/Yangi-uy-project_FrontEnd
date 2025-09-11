@@ -4,7 +4,16 @@ import { initReactI18next } from 'react-i18next';
 const resources = {
   uz: {
     translation: {
-      Full_name_is_required:'To‘liq ismni kiriting',
+      region: 'viloyat',
+      city: 'shahar/tuman',
+      zipcode:'pochta indeksi',
+      address: 'Manzil',
+      advanced: 'ko\'proq',
+      search: 'qidirish',
+      status: 'holati',
+      price: 'narxi',
+      placeholder: 'Manzil, tuman, shahar yoki pochta indeksini kiriting',
+      Full_name_is_required: 'To‘liq ismni kiriting',
       home: 'Asosiy',
       properties: 'Turar-joylar',
       contacts: 'Bog\'lanish',
@@ -40,6 +49,15 @@ const resources = {
   },
   ru: {
     translation: {
+      region: 'область',
+      city: 'район/город ',
+      zipcode:'почтовый индекс',
+      address: 'Aдрес',
+      advanced: 'расширенный',
+      search: 'Поиск',
+      status: 'статус',
+      price: 'цена',
+      placeholder: 'Введите адрес, район, город или почтовый индекс',
       home: 'Главная',
       properties: 'Hедвижимость',
       contacts: 'Контакты',
@@ -75,6 +93,15 @@ const resources = {
   },
   en: {
     translation: {
+      region: 'region',
+      city: 'city/ditrict',
+      zipcode:'zipcode',
+      address: 'Address',
+      advanced: 'advanced',
+      search: 'search',
+      price: 'price',
+      status: 'status',
+      placeholder: 'Enter an address, neighborhood, city, or ZIP code',
       home: 'Home',
       properties: 'Properties',
       contacts: 'Contacts',

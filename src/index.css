@@ -1,45 +1,23 @@
+/* src/index.css (or main.css) */
 @import "tailwindcss";
 
+/* Optional: tweak design tokens (breakpoints, colors, etc.) */
+@theme {
+  --breakpoint-sm: 40rem;
+  --breakpoint-md: 48rem;
+  --breakpoint-lg: 64rem;
+  --breakpoint-xl: 80rem;
+}
+
 html, body, #root {
-  @apply min-h-screen bg-white text-white m-0 p-0;
-}
-.container {
-  width: 100%;
-  @media (width >=40rem
-
-    /* 640px */
-  ) {
-    max-width: 40rem
-      /* 640px */
-    ;
-  }
-
-  @media (width >=48rem
-
-    /* 768px */
-  ) {
-    max-width: 48rem
-      /* 768px */
-    ;
-  }
-
-  @media (width >=64rem
-
-    /* 1024px */
-  ) {
-    max-width: 64rem
-      /* 1024px */
-    ;
-  }
-
-  @media (width >=80rem
-
-    /* 1280px */
-  ) {
-    max-width: 80rem
-      /* 1280px */
-    ;
-  }
-
+  @apply min-h-dvh bg-white text-slate-900 m-0 p-0 overflow-x-clip;
 }
 
+/* Your slider arrows */
+.arrow {
+  @apply bg-gray-200 rounded-full p-4 absolute z-10 cursor-pointer
+         shadow-[0px_0px_36px_12px_rgba(0,0,0,0.1)] top-1/2 -translate-y-1/2
+         transition active:scale-95;
+}
+.arrow:hover { @apply bg-gray-300; }
+.arrow:focus-visible { @apply outline-none ring-2 ring-sky-500; }

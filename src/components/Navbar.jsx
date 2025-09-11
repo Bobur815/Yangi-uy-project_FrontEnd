@@ -3,8 +3,7 @@ import { Link, NavLink, useNavigate } from 'react-router-dom';
 import { useMe } from '../hooks/useMe';
 import LangSwitcher from './LangSwitcher';
 import { useTranslation } from 'react-i18next';
-import { Link as RouterLink } from 'react-router-dom';
-import logo from '/XMLID 1.png'
+import MyBrand from './MyBrand';
 import roofIcon from '/icons8-roof-100.png'
 const roofNode = <img src={roofIcon} alt="" />;
 
@@ -18,7 +17,6 @@ const navBtnSx = {
         color: '#0E7C86',
     },
 
-    // underline (animates left -> right)
     '&::after': {
         content: '""',
         position: 'absolute',
@@ -31,14 +29,13 @@ const navBtnSx = {
     },
     '&:hover::after': { width: '100%' },
 
-    /* place the startIcon above text and hide by default */
     '& .MuiButton-startIcon': {
         position: 'absolute',
         left: '50%',
-        top: -6,                      // sits above the text
+        top: -6,                     
         transform: 'translateX(-50%) translateY(6px)',
         opacity: 0,
-        margin: 0,                     // remove MUI’s default gap
+        margin: 0,                     
         transition: 'opacity 220ms ease, transform 220ms ease',
         '& > img, & > svg': { width: 50, height: 20, display: 'block' },
     },
@@ -50,10 +47,10 @@ const navBtnSx = {
     /* === ACTIVE STATE (NavLink adds .active) === */
     '&.active': {
         color: '#0E7C86',
-    },                 // keep underline
+    },                
     '&.active .MuiButton-startIcon': {
         opacity: 1,
-        transform: 'translateX(-50%) translateY(0)',        // keep roof visible
+        transform: 'translateX(-50%) translateY(0)',     
     },
 };
 
@@ -65,34 +62,7 @@ export default function Navbar() {
     return (
         <AppBar position="sticky" elevation={2} sx={{ paddingY: 2, backgroundColor: '#0B1020' }}>
             <Toolbar disableGutters className="container mx-auto flex justify-between">
-                <Stack
-                    component={RouterLink}
-                    to="/"
-                    direction="row"
-                    spacing={2}
-                    alignItems="flex-end"
-                    sx={{ cursor: 'pointer', textDecoration: 'none', color: 'inherit' }}
-                >
-                    <img src={logo} alt="" className='w-[40px]' />
-                    <Typography
-                        variant="h6"
-                        color="inherit"
-                        sx={{ fontSize: 24, alignSelf: 'flex-end', lineHeight: 1 }}
-                    >
-                        Yangi
-                        <span className="relative inline-block ml-2 rounded bg-[#0E7C86] text-white">
-
-                            <span
-                                aria-hidden
-                                className="absolute -top-7 left-1/2 -translate-x-1/2 w-[35px] pointer-events-none"
-                            >
-                                {roofNode}
-                            </span>
-
-                            <span className="p-1 inline-block">Uy</span>
-                        </span>
-                    </Typography>
-                </Stack>
+                <MyBrand />
                 <Stack direction="row" spacing={4}>
                     <Button
                         component={NavLink}
