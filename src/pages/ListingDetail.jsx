@@ -1,9 +1,9 @@
 // src/pages/listings/ListingDetails.jsx
 import { useParams } from 'react-router-dom';
 import { useQuery } from '@tanstack/react-query';
-import { api } from '../../lib/axios';
+import { api } from '../lib/axios';
 import { Box, CircularProgress, Typography, Grid, Button } from '@mui/material';
-import { absUrl } from '../../lib/media';
+import { absUrl } from '../lib/media';
 
 export default function ListingDetails() {
   const { id } = useParams();
