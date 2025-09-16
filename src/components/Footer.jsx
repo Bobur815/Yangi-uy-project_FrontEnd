@@ -8,7 +8,7 @@ import TwitterIcon from "@mui/icons-material/Twitter";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import KeyboardArrowUpRoundedIcon from "@mui/icons-material/KeyboardArrowUpRounded";
-import MyBrand from "./MyBrand";
+import MyBrand from "./navbar/MyBrand";
 
 const PHONE = "+998 90 166 27 14";
 const ADDRESS = "104-B, Yangi asr street, Fergana, Uzbekistan";

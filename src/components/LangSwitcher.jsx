@@ -21,7 +21,6 @@ export default function LangSwitcher() {
       }}
       sx={{
         minWidth: 140,
-        // input (closed select) styles
         '& .MuiOutlinedInput-root': {
           backgroundColor: 'var(--paper)',
           color: 'var(--fg)',

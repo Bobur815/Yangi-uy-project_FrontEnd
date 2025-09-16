@@ -1,6 +1,6 @@
 import { Navigate, Outlet, useLocation } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
-import { useMe } from '../hooks/useMe';
+import { useMe } from '../../hooks/useMe';
 
 export default function Protected() {
   const { t } = useTranslation();

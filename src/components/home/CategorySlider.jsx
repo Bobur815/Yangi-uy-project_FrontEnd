@@ -6,23 +6,19 @@ import "slick-carousel/slick/slick-theme.css";
 import arrowLeft from "/arrow-left.png";
 import arrowRight from "/arrow-right.png";
 
-import HouseIcon from "@mui/icons-material/House";
-import ApartmentIcon from "@mui/icons-material/Apartment";
-import BusinessIcon from "@mui/icons-material/Business";
-import VillaIcon from "@mui/icons-material/Villa";
 import { useTranslation } from "react-i18next";
+import { useCategories } from "../../hooks/useCategories";
+import { CircularProgress, Typography } from "@mui/material";
+import { absUrl } from "../../lib/media";
 
 export default function CategorySlider() {
   const { t } = useTranslation("common");
   const sliderRef = useRef(null);
 
-  const categories = [
-    { id: "house", title: t("house") || "House", image: "/unsplash_5q1KnUjtjaM.png", Icon: HouseIcon },
-    { id: "apartment", title: t("apartment") || "Apartment", image: "/unsplash_ZtC4_rPCRXA.png", Icon: ApartmentIcon },
-    { id: "office", title: t("office") || "Office", image: "/unsplash_ZtC4_rPCRXA.png", Icon: BusinessIcon },
-    { id: "villa", title: t("villa") || "Villa", image: "/unsplash_b_79nOqf95I.png", Icon: VillaIcon },
-  ];
-
+  const { data: categories, isLoading, isError } = useCategories();
+  if (isLoading) return <CircularProgress />;
+  if (isError) return <Typography color="error">Failed to load categories</Typography>;
+  
   const settings = {
     arrows: false,
     dots: true,
@@ -48,13 +44,13 @@ export default function CategorySlider() {
 
       <div className="container mx-auto px-4 mt-10">
         <Slider ref={sliderRef} {...settings}>
-          {categories.map(({ id, title, image, Icon }) => (
+          {categories.data.map(({ id, name, imgUrl }) => (
             <div key={id} className="px-3">
               <div className="relative h-72 md:h-100 rounded-xl overflow-hidden border border-slate-200 shadow-md">
 
                 <img
-                  src={image}
-                  alt={title}
+                  src={absUrl(imgUrl)}
+                  alt={name}
                   className="absolute inset-0 w-full h-full object-cover"
                   loading="lazy"
                   decoding="async"
@@ -64,8 +60,7 @@ export default function CategorySlider() {
 
                 <div className="absolute inset-0 grid place-items-center">
                   <div className="flex flex-col items-center gap-4 text-white">
-                    <Icon sx={{ fontSize: 56, color: "white" }} />
-                    <span className="text-lg md:text-xl font-semibold">{title}</span>
+                    <span className="text-lg md:text-xl font-semibold">{name}</span>
                   </div>
                 </div>
               </div>

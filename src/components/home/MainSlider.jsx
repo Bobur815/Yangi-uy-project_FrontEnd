@@ -81,7 +81,7 @@ export default function SimpleSlider() {
 
                             {/* info overlay */}
                             <div className="absolute inset-x-6 bottom-3 md:inset-x-6 md:bottom-5 ">
-                                <div className="rounded-xl bg-black/20 backdrop-blur-sm text-white p-4 mx-[100px] flex flex-col items-center justify-center gap-6">
+                                <div className="container mx-auto rounded-xl bg-black/20 backdrop-blur-sm text-white p-4 flex flex-col items-center justify-center gap-6">
                                     <div className="min-w-[220px] items-center flex flex-col justify-center gap-4">
                                         <h3 className="text-[60px] font-semibold leading-tight">{item.title}</h3>
                                         <p className="text-[30px] opacity-90">{item.address}</p>

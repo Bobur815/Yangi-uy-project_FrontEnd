@@ -4,7 +4,6 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { useTranslation } from "react-i18next";
 import Hero_Picture from '/Hero_Picture.jpg'
-// Use your own arrow assets; these work with the .arrow class you already have
 import arrowLeft from "/arrow-left.png";
 import arrowRight from "/arrow-right.png";
 

@@ -1,0 +1,40 @@
+const apartments = [
+    {
+        id: "apt-101",
+        title: "New Apartment Nice View",
+        address: "Quincy St, Brooklyn, NY, USA",
+        beds: 4,
+        baths: 5,
+        garage: 1,
+        sizeSqft: 1200,
+        pricePerMonth: 7500,
+        oldPrice: 8200,
+        tags: ["FEATURED", "FOR SALE"],
+    },
+    {
+        id: "apt-102",
+        title: "New Apartment Nice View",
+        address: "Quincy St, Brooklyn, NY, USA",
+        beds: 4,
+        baths: 5,
+        garage: 1,
+        sizeSqft: 1200,
+        pricePerMonth: 7500,
+        oldPrice: 8200,
+        tags: ["FEATURED", "FOR SALE"],
+    },
+    {
+        id: "apt-103",
+        title: "New Apartment Nice View",
+        address: "Quincy St, Brooklyn, NY, USA",
+        beds: 4,
+        baths: 5,
+        garage: 1,
+        sizeSqft: 1200,
+        pricePerMonth: 7500,
+        oldPrice: 8200,
+        tags: ["FEATURED", "FOR SALE"],
+    },
+];
+
+export default apartments

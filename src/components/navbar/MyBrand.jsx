@@ -20,7 +20,7 @@ function MyBrand() {
       <img
         src={logo}
         alt=""
-        className="w-9 sm:w-10 md:w-12 lg:w-[52px] h-auto"
+        className="w-9 sm:w-10 md:w-12 lg:w-[40px] h-auto"
       />
 
       {/* Wordmark */}
